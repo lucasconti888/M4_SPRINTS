@@ -1,11 +1,19 @@
 #include <iostream>
 #include <string>
-
+using namespace std;
 // 1 -  Faça uma função que recebe uma certa medida e ajusta ela percentualmente 
 // entre dois valores mínimo e máximo e retorna esse valor
-
+int convert(int value, int min, int max) {
+	return int((float(value-min)/float(max-min))*100);
+}
 // 2 - Faça uma função que simule a leitura de um sensor lendo o 
 // valor do teclado ao final a função retorna este valor
+
+int readSensor(void) {
+	int value;
+	cin >> value; 
+	return value;
+}
 
 // 3 - Faça uma função que armazena uma medida inteira qualquer 
 // em um vetor fornecido. Note que como C não possui vetores 
@@ -13,7 +21,11 @@
 // valor máximo do vetor assim como a última posição preenchida
 // Evite também que, por acidente, um valor seja escrito em 
 // uma área de memória fora do vetor
-
+int vetor(int novoValor, int LastIndex, int *v, int maxSize) {
+	int *array = v;
+	array[LastIndex] = novoValor;
+	return LastIndex+1;
+}
 
 
 // 4 - Faça uma função que recebe um vetor com 4 posições que contém 
@@ -21,9 +33,6 @@
 // A função deve retornar duas informações: A primeira é a direção 
 // de maior distância ("Direita", "Esquerda", "Frente", "Tras") e a 
 // segunda é esta maior distância.
-
-
-
 
 // 5 - Faça uma função que pergunta ao usuário se ele deseja continuar o mapeamento e 
 // retorna verdadeiro ou falso
