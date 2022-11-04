@@ -1,11 +1,11 @@
-const int buzzer = 1;
+const int buzzer = 4;
 const int botaoS = 5;
-const int botaoP = 4;
-const int LDR = 7;
-const int led1 = 47;
-const int led2 = 45;
-const int led3 = 35;
-const int led4 = 37;
+const int botaoP = 12;
+const int LDR = 13;
+const int led1 = 2;
+const int led2 = 27;
+const int led3 = 25;
+const int led4 = 21;
 int valores[100];
 int Vatual = 0;
 void som(int value){
